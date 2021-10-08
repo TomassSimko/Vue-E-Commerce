@@ -23,7 +23,7 @@ export default {
     this.$store.commit("updateCartFromLocalStorage");
   },
 
-  created() {
+  created() { // checking the state 
     firebase.auth().onAuthStateChanged((user) => {
       this.$store.commit('updateUser',user);
       if(user){
